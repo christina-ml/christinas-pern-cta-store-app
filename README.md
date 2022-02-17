@@ -1,5 +1,7 @@
 ## Project Links
-Back-end Deployment: [https://cl-cta-be.herokuapp.com/](https://cl-cta-be.herokuapp.com/)
+Back-end Deployment (Heroku): [https://cl-cta-be.herokuapp.com/](https://cl-cta-be.herokuapp.com/)
+
+Front-end Deployment (Netlify): [https://hardcore-poincare-178c01.netlify.app/](https://hardcore-poincare-178c01.netlify.app/)
 
 # PERN Final Project Template
 
