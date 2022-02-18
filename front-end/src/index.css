@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+/* Navbar Links and buttons */
+nav {
+    background-color: ghostwhite;
+    /* background-image: url("https://c8.alamy.com/comp/2C9B02X/seamless-frozen-glass-texture-background-ice-effect-irregular-mottled-pattern-cold-mottled-frost-white-blue-all-over-print-2C9B02X.jpg"); */
+    background-image: url("https://t4.ftcdn.net/jpg/02/25/62/21/400_F_225622124_rG99vVWTRjIwYvn2ULJYdXSU5XJ9W81E.jpg");
+    background-size: 40%;
+    background-position-y: top;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav h1 {
+    background-color: ghostwhite;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: orangered;
+}
+
+nav button {
+    margin-top: 15%;
+    background-color: white;
+    color: orangered;
+    padding: 10px;
+    border-radius: 5px;
+}
