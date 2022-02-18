@@ -10,6 +10,58 @@ const getAllProducts = async () => {
     }
 };
 
+// GET ONE product
+const getOneProduct = async (id) => {
+    try {
+        const oneProduct = await db.one("SELECT * FROM products WHERE id=$1", id);
+        return oneProduct;
+    } catch (error) {
+        return error;
+    }
+};
+
+// CREATE product
+const createProduct = async (product) => {
+    try {
+        const newProduct = await db.one(
+            "INSERT INTO products (name, description, price, rating, featured, image) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
+            [product.name, product.description, product.price, product.rating, product.featured, product.image]
+            );
+            return newProduct;
+    } catch (error) {
+        return error;
+    }
+};
+
+// UPDATE product
+const updateProduct = async (id, product) => {
+    try {
+        const updatedProduct = await db.one(
+            "UPDATE products SET name=$1, description=$2, price=$3, rating=$4, featured=$5, image=$6 WHERE id=$7 RETURNING *",
+            [product.name, product.description, product.price, product.rating, product.featured, product.image, id]
+            );
+            return updatedProduct;
+    } catch (error) {
+        return error;
+    }
+};
+
+// DELETE product
+const deleteProduct = async (id) => {
+    try {
+        const deletedProduct = await db.one(
+            "DELETE FROM products WHERE id=$1 RETURNING *"
+        )
+        return deletedProduct;
+    } catch (error) {
+        return error;
+    }
+};
+
 module.exports = {
-    getAllProducts
+    getAllProducts,
+    getOneProduct,
+    createProduct,
+    updateProduct,
+    deleteProduct
 };
