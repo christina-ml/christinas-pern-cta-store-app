@@ -2,7 +2,9 @@ const e = require("cors");
 const express = require("express");
 const products = express.Router();
 
+// queries & validations
 const { getAllProducts, getOneProduct, createProduct, updateProduct, deleteProduct } = require("../queries/products.js");
+const { checkText, checkInteger, checkBoolean } = require("../validations/checkProducts.js");
 
 // INDEX - GET ALL products
 products.get("/", async (req, res) => {
@@ -26,9 +28,9 @@ products.get("/:id", async (req, res) => {
 })
 
 // CREATE product
-products.post("/", async (req, res) => {
+products.post("/", checkText, checkInteger, checkBoolean, async (req, res) => {
     const createdProduct = await createProduct(req.body); 
-    if (createdProduct) {
+    if (createdProduct.id) {
         res.status(200).json(createdProduct);
     } else {
         res.status(500).json({ error: "500 - Product creation error." })
