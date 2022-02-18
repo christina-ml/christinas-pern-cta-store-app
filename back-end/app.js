@@ -9,6 +9,7 @@ const app = express();
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json()); // Parse incoming JSON
+app.use(express.static('public')) // Static images (locally)
 app.use("/products", productsController);
 
 // ROUTES
