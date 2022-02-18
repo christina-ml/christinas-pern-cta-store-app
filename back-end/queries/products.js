@@ -24,8 +24,8 @@ const getOneProduct = async (id) => {
 const createProduct = async (product) => {
     try {
         const newProduct = await db.one(
-            "INSERT INTO products (name, description, price, rating, featured, image) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-            [product.name, product.description, product.price, product.rating, product.featured, product.image]
+            "INSERT INTO products (name, description, price, rating, featured, seller, image) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+            [product.name, product.description, product.price, product.rating, product.featured, product.seller, product.image]
             );
             return newProduct;
     } catch (error) {
@@ -37,8 +37,8 @@ const createProduct = async (product) => {
 const updateProduct = async (id, product) => {
     try {
         const updatedProduct = await db.one(
-            "UPDATE products SET name=$1, description=$2, price=$3, rating=$4, featured=$5, image=$6 WHERE id=$7 RETURNING *",
-            [product.name, product.description, product.price, product.rating, product.featured, product.image, id]
+            "UPDATE products SET name=$1, description=$2, price=$3, rating=$4, featured=$5, seller=$6, image=$7 WHERE id=$8 RETURNING *",
+            [product.name, product.description, product.price, product.rating, product.featured, product.seller, product.image, id]
             );
             return updatedProduct;
     } catch (error) {

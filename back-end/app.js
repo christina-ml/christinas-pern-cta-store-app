@@ -13,7 +13,7 @@ app.use("/products", productsController);
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Hello, world!");
+  res.send("Hello, backend products world!");
 });
 
 app.get("*", (req, res) => {

@@ -12,5 +12,6 @@ CREATE TABLE products (
     price INT DEFAULT 0,
     rating INT CHECK (rating > 0 AND rating <= 5),
     featured BOOLEAN,
+    seller TEXT,
     image TEXT
 );
