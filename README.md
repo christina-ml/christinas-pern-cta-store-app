@@ -3,6 +3,14 @@ Back-end Deployment (Heroku): [https://cl-cta-be.herokuapp.com/](https://cl-cta-
 
 Front-end Deployment (Netlify): [https://hardcore-poincare-178c01.netlify.app/](https://hardcore-poincare-178c01.netlify.app/)
 
+
+## Additional Features
+
+- Backend: Validations for data types
+- Frontend: Static images locally
+
+Resource used: [Serving static files in Express](https://expressjs.com/en/starter/static-files.html)
+
 # PERN Final Project Template
 
 - select `use this template`
