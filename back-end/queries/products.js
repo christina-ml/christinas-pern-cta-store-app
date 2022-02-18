@@ -50,8 +50,9 @@ const updateProduct = async (id, product) => {
 const deleteProduct = async (id) => {
     try {
         const deletedProduct = await db.one(
-            "DELETE FROM products WHERE id=$1 RETURNING *"
-        )
+            "DELETE FROM products WHERE id=$1 RETURNING *",
+            id
+        );
         return deletedProduct;
     } catch (error) {
         return error;

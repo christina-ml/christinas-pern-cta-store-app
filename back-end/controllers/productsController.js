@@ -6,49 +6,56 @@ const { getAllProducts, getOneProduct, createProduct, updateProduct, deleteProdu
 
 // INDEX - GET ALL products
 products.get("/", async (req, res) => {
-    try {
-        const allProducts = await getAllProducts();
-        if (allProducts[0]) {
-            res.status(200).json(allProducts);
-        } else {
-            res.status(500).json({ error: "500 - internal server error" });
-        }
-    } catch (error) {
-        console.log(error);
+    const allProducts = await getAllProducts();
+    if (allProducts[0]) {
+        res.status(200).json(allProducts);
+    } else {
+        res.status(500).json({ error: "500 - internal server error" });
     }
 });
 
 // GET ONE product
 products.get("/:id", async (req, res) => {
     const { id } = req.params;
-    try {
-        const oneProduct = await getOneProduct(id);
-        if (oneProduct.id) {
-            res.status(200).json(oneProduct);
-        } else {
-            res.status(404).json({ error: "Product not found." });
-        }
-    } catch (error) {
-        console.log(error);
+    const oneProduct = await getOneProduct(id);
+    if (oneProduct.id) {
+        res.status(200).json(oneProduct);
+    } else {
+        res.status(404).json({ error: "Product not found." });
     }
 })
 
 // CREATE product
 products.post("/", async (req, res) => {
-    try {
-        const createdProduct = await createProduct(req.body); 
-        if (createdProduct) {
-            res.status(200).json(createdProduct);
-        } else {
-            res.status(500).json({ error: "500 - Product creation error." })
-        }
-    } catch (error) {
-        console.log(error);
+    const createdProduct = await createProduct(req.body); 
+    if (createdProduct) {
+        res.status(200).json(createdProduct);
+    } else {
+        res.status(500).json({ error: "500 - Product creation error." })
     }
 })
 
 // UPDATE product
+products.put("/:id", async (req, res) => {
+    const { id } = req.params;
+    const { body } = req;
+    const updatedProduct = await updateProduct(id, body);
+    if (updatedProduct.id) {
+        res.status(200).json(updatedProduct);
+    } else {
+        res.status(422).json({ error: "422 - Cannot update product." })
+    }
+})
 
 // DELETE product
+products.delete("/:id", async (req, res) => {
+    const { id } = req.params;
+    const deletedProduct = await deleteProduct(id);
+    if (deletedProduct.id) {
+        res.status(200).json(deletedProduct);
+    } else {
+        res.status(404).json({ error: "404 - Product not found" });
+    }
+})
 
 module.exports = products;
