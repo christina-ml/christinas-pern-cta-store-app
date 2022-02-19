@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 // helper function - ratings
 import setStars from "../helpers/setStars";
@@ -11,6 +11,7 @@ export default function ProductDetails() {
   const [product, setProduct] = useState({});
   const [local, setLocal] = useState({});
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -24,6 +25,16 @@ export default function ProductDetails() {
       });
   }, [id]);
 
+  // DELETE
+  const handleDelete = () => {
+      axios.delete(`${API}/products/${id}`)
+        .then((res)=> {
+           navigate("/products"); 
+        }).catch((err) => {
+            console.log(err)
+        });
+  }
+
   /*
     - Set state as `local` to check all image urls.
     - If first character is a `/` or an `h`
@@ -31,25 +42,39 @@ export default function ProductDetails() {
   */
   return (
     <div>
-      <h2>{product.name}</h2>
-      <div>
+        <h2>{product.name}</h2>
+        <div>
         {local === "/" ? (
-          <span>
+            <span>
             <img src={API + product.image} height="200px" alt="text url" />
-          </span>
+            </span>
         ) : (
-          <span>
+            <span>
             <img src={product.image} height="200px" alt="text url" />
-          </span>
+            </span>
         )}
-      </div>
-      <div>Price: ${product.price}</div>
-      <div>Rating:{setStars(product)}</div>
-      <div>Description: {product.description}</div>
-      <div>
+        </div>
+        <div>Price: ${product.price}</div>
+        <div>Rating:{setStars(product)}</div>
+        <div>Description: {product.description}</div>
+        <div>
         Featured: {product.featured ? <span>Yes</span> : <span>No</span>}
-      </div>
-      <div>Seller: {product.seller}</div>
+        </div>
+        <div>Seller: {product.seller}</div>
+
+        <div>
+            <Link to={`/products`}>
+                <button>Back</button>
+            </Link>
+        </div>
+        <div>
+            <Link to={`/products/${id}/edit`}>
+                <button>Edit</button>
+            </Link>
+        </div>
+        <div>
+            <button onClick={handleDelete}>Delete</button>
+        </div>
     </div>
-  );
+    );
 }
