@@ -6,14 +6,14 @@
 export default function setStars(product) {
     const { rating } = product;
     if (rating === 1) {
-      return <div>★☆☆☆☆</div>
+      return <span>★☆☆☆☆</span>
     } else if (rating === 2) {
-      return <div>★★☆☆☆</div>
+      return <span>★★☆☆☆</span>
     } else if (rating === 3) {
-      return <div>★★★☆☆</div>
+      return <span>★★★☆☆</span>
     } else if (rating === 4) {
-      return <div>★★★★☆</div>
+      return <span>★★★★☆</span>
     } else if (rating === 5) {
-      return <div>★★★★★</div>
+      return <span>★★★★★</span>
     }
 }

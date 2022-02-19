@@ -44,7 +44,7 @@ export default function ProductDetails() {
         )}
       </div>
       <div>Price: ${product.price}</div>
-      <div>Rating: {product.rating}{setStars(product)}</div>
+      <div>Rating:{setStars(product)}</div>
       <div>Description: {product.description}</div>
       <div>
         Featured: {product.featured ? <span>Yes</span> : <span>No</span>}

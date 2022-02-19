@@ -23,7 +23,7 @@ export default function Products() {
 
 
     return (
-        <div>
+        <div className="products">
             {/* <img src={API+"/superJumbo.jpg"} /> */}
             {products.map((product) => {
                 if (product.image.substring(0,8) === "https://") {

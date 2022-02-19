@@ -6,8 +6,8 @@ body {
 nav {
     background-color: ghostwhite;
     /* background-image: url("https://c8.alamy.com/comp/2C9B02X/seamless-frozen-glass-texture-background-ice-effect-irregular-mottled-pattern-cold-mottled-frost-white-blue-all-over-print-2C9B02X.jpg"); */
-    background-image: url("https://t4.ftcdn.net/jpg/02/25/62/21/400_F_225622124_rG99vVWTRjIwYvn2ULJYdXSU5XJ9W81E.jpg");
-    background-size: 40%;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/001/591/883/non_2x/magic-fairy-tale-pastel-sky-background-free-vector.jpg");
+    background-size: 100%;
     background-position-y: top;
     display: flex;
     flex-direction: row;
@@ -33,4 +33,40 @@ nav button {
     color: orangered;
     padding: 10px;
     border-radius: 5px;
+}
+
+/* Products section - index */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.product-overview {
+    border: 1px solid gainsboro;
+    box-shadow: 5px 5px 5px gainsboro;
+    margin: 10px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+/* Navbar Links and buttons */
+    nav {
+        flex-direction: column;
+        background-size: cover;
+        text-align: center;
+    }
+
+    nav button {
+        margin-top: 0;
+    }
+
+    /* Products section - index */
+    .products {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
