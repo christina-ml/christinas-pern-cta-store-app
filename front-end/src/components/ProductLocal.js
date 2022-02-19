@@ -11,10 +11,6 @@ export default function Product({ product }) {
       </Link>
       <div>Price: ${product.price}</div>
       <div>Rating: {product.rating}</div>
-      <h4>Let's include these on the details page instead:</h4>
-      <div>Description: {product.description}</div>
-      <div>Featured: {product.featured ? (<span>Yes</span>) : (<span>No</span>)}</div>
-      <div>Seller: {product.seller}</div>
     </div>
   );
 }
