@@ -2,6 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+// helper function - ratings
+import setStars from "../helpers/setStars";
+
 const API = process.env.REACT_APP_API_URL;
 
 export default function ProductDetails() {
@@ -41,6 +44,7 @@ export default function ProductDetails() {
         )}
       </div>
       <div>Price: ${product.price}</div>
+      <div>Rating: {product.rating}{setStars(product)}</div>
       <div>Description: {product.description}</div>
       <div>
         Featured: {product.featured ? <span>Yes</span> : <span>No</span>}

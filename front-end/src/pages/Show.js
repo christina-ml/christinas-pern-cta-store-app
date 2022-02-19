@@ -3,7 +3,8 @@ import ProductDetails from "../components/ProductDetails"
 export default function Show() {
     return (
         <div>
-            Show.js page - showing one product! And all it includes.
+            <h1>Product Details</h1>
+            <hr />
             <ProductDetails />
         </div>
     )
