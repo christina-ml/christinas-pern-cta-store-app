@@ -6,10 +6,17 @@ Front-end Deployment (Netlify): [https://hardcore-poincare-178c01.netlify.app/](
 
 ## Additional Features
 
-- Backend: Validations for data types
-- Frontend: Static images locally
+### Backend - Additional Features: 
+- Validations for data types
 
-Resource used: [Serving static files in Express](https://expressjs.com/en/starter/static-files.html)
+### Frontend - Additional Features: 
+- Static images hosted locally, as well as can be from a URL address.
+  - Resource used: [Serving static files in Express](https://expressjs.com/en/starter/static-files.html)
+
+- Made helper function in `setStars.js` to show stars for each product's rating.
+  - Rating must be between 0 and 5.
+  - Cannot be 0 stars, because of restrictions set in `schema.sql` file in backend db.
+
 
 # PERN Final Project Template
 
