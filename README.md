@@ -7,15 +7,22 @@ Front-end Deployment (Netlify): [https://hardcore-poincare-178c01.netlify.app/](
 ## Additional Features
 
 ### Backend - Additional Features: 
-- Validations for data types
+- Validations for data types in `checkProducts.js`.
+  - Checking for valid data types: text, integer, and boolean
+
+- Static images hosted locally, as well as can be from a URL address.
+  - To do this, I used express.static as middleware in the backend in the `app.js` file.
+  - Resource used: [Serving static files in Express](https://expressjs.com/en/starter/static-files.html)
 
 ### Frontend - Additional Features: 
 - Static images hosted locally, as well as can be from a URL address.
-  - Resource used: [Serving static files in Express](https://expressjs.com/en/starter/static-files.html)
+  - To add to frontend, I used a ternary that returns either `Product.js` or `ProductLocal.js`, depending on whether or not the image is locally added from my computer, or from a URL web address.
 
 - Made helper function in `setStars.js` to show stars for each product's rating.
   - Rating must be between 0 and 5.
   - Cannot be 0 stars, because of restrictions set in `schema.sql` file in backend db.
+
+- Using the `map()` method on the `FourOFour.js` page to show a list of words beginning with the letter "C" from an array.
 
 
 # PERN Final Project Template

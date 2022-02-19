@@ -12,8 +12,8 @@ export default function Product({ product }) {
         <h2>{product.name}</h2>
         <img src={API + product.image} height="100px" alt="local url" />
       </Link>
-      <div>Price: ${product.price}</div>
       <div>Rating: {setStars(product)}</div>
+      <div>Price: ${product.price}</div>
     </div>
   );
 }

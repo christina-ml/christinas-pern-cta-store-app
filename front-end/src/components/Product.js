@@ -10,8 +10,8 @@ export default function Product({ product }) {
           <h2>{product.name}</h2>
           <img src={product.image} height="100px" alt="text url" />
         </Link>
-        <div>Price: ${product.price}</div>
         <div>Rating: {setStars(product)}</div>
+        <div>Price: ${product.price}</div>
     </div>
   );
 }
