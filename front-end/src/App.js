@@ -5,6 +5,7 @@ import NavBar from "./pages/NavBar";
 import Home from "./pages/Home";
 import Index from "./pages/Index";
 import New from "./pages/New";
+import Show from "./pages/Show";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Index />} />
             <Route path="/products/New" element={<New />} />
+            <Route path="/products/:id" element={<Show />} />
           </Routes>
         </main>
       </Router>

@@ -3,7 +3,8 @@ import Products from "../components/Products"
 export default function Index() {
     return (
         <div>
-            This is Index.js with a list of all products.
+            <h1>Showing All Products</h1>
+            <hr />
             <Products />
         </div>
     )
