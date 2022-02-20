@@ -41,12 +41,16 @@ export default function EditProduct() {
             })
     }
 
+    let handleNumberChange = (e) => {
+        setProduct({ ...product, [e.target.id]: Number(e.target.value) });
+    }
+
     const handleCheckboxChange = (e) => {
         setProduct({ ...product, featured: !product.featured });
     }
 
     return (
-        <div>
+        <div className="form-container">
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Product Name:</label>
                 <input 
@@ -58,26 +62,28 @@ export default function EditProduct() {
                     required
                 />
                 <label htmlFor="description">Product Description:</label>
-                <input 
+                <textarea 
                     id="description"
                     type="text" 
                     value={product.description}
                     onChange={handleTextChange}
-                />
+                ></textarea>
                 <label htmlFor="price">Price:</label>
                 <input 
                     id="price"
                     name="price"
                     type="number"
                     value={product.price}
-                    onChange={handleTextChange}
+                    onChange={handleNumberChange}
                 />
-                <label htmlFor="rating">Rating 0-5:</label>
+                <label htmlFor="rating">Rating 1-5:</label>
                 <input 
                     id="rating"
                     type="number" 
+                    min="1"
+                    max="5"
                     value={product.rating}
-                    onChange={handleTextChange}
+                    onChange={handleNumberChange}
                 />
                 <label htmlFor="featured">Featured:</label>
                 <input 
@@ -102,6 +108,7 @@ export default function EditProduct() {
                     value={product.image}
                     placeholder="http://"
                     onChange={handleTextChange}
+                    placeholder="https://"
                 />
                 <input type="submit" />
             </form>

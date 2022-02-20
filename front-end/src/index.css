@@ -49,6 +49,36 @@ nav button {
     padding-bottom: 15px;
 }
 
+/* Forms */
+.form-container {
+    padding-bottom: 30px;
+    margin: auto;
+    width: 95%;
+}
+
+input[type],
+textarea {
+  display: block;
+  width: 80%;
+  margin: auto;
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+    margin: 0 3%;
+    width: 15%;
+  }
+
+input[type="number"] {
+    width: 5%;
+    margin: 0 10%;
+}
+
+input[type="submit"] {
+    width: 30%;
+    margin-top: 30px;
+  }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
 /* Navbar Links and buttons */

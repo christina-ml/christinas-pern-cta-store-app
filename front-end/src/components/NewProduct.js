@@ -7,41 +7,27 @@ const API = process.env.REACT_APP_API_URL;
 export default function EditProduct() {
     let navigate = useNavigate();
 
-    // const addProduct = (newProduct) => {
-    //     axios
-    //       .post(`${API}/products`, newProduct)
-    //       .then(
-    //         () => {
-    //           navigate(`/products`);
-    //         },
-    //         (error) => console.error(error)
-    //       )
-    //       .catch((c) => console.warn("catch", c));
-    //   };
-
     let [product, setProduct] = useState({
         name: "",
         description: "",
-        price: 3,
-        rating: 2,
+        price: 30,
+        rating: 3,
         featured: false,
         seller: "",
-        image: "https://",
+        image: "",
     });
 
-    const handleTextChange = (e) => {
+    let handleTextChange = (e) => {
         setProduct({ ...product, [e.target.id]: e.target.value });
+    }
+
+    let handleNumberChange = (e) => {
+        setProduct({ ...product, [e.target.id]: Number(e.target.value) });
     }
 
     const handleCheckboxChange = (e) => {
         setProduct({ ...product, featured: !product.featured });
     }
-
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     addProduct(product);
-    //     navigate(`/products`);
-    //   };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -55,7 +41,7 @@ export default function EditProduct() {
     }
 
     return (
-        <div>
+        <div className="form-container">
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Product Name:</label>
                 <input 
@@ -67,26 +53,27 @@ export default function EditProduct() {
                     required
                 />
                 <label htmlFor="description">Product Description:</label>
-                <input 
+                <textarea 
                     id="description"
                     type="text" 
                     value={product.description}
                     onChange={handleTextChange}
-                />
+                ></textarea>
                 <label htmlFor="price">Price:</label>
                 <input 
                     id="price"
-                    name="price"
                     type="number"
                     value={product.price}
-                    onChange={handleTextChange}
+                    onChange={handleNumberChange}
                 />
-                <label htmlFor="rating">Rating 0-5:</label>
+                <label htmlFor="rating">Rating 1-5:</label>
                 <input 
                     id="rating"
-                    type="number" 
+                    type="number"
+                    min="1"
+                    max="5"
                     value={product.rating}
-                    onChange={handleTextChange}
+                    onChange={handleNumberChange}
                 />
                 <label htmlFor="featured">Featured:</label>
                 <input 
@@ -109,11 +96,12 @@ export default function EditProduct() {
                     type="text"
                     value={product.image}
                     onChange={handleTextChange}
+                    placeholder="https://"
                 />
                 <input type="submit" />
             </form>
-            <Link to={`/`}>
-                <button>Nevermind!</button>
+            <Link to={`/products`}>
+                <button>Cancel</button>
             </Link>
         </div>
     )
