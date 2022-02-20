@@ -2,8 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
+const API = process.env.REACT_APP_API_URL;
+
 export default function EditProduct() {
     let { id } = useParams();
+    let navigate = useNavigate();
+    
     const [product, setProduct] = useState({
         name: "",
         description: "",
@@ -13,9 +17,6 @@ export default function EditProduct() {
         seller: "",
         image: "",
     });
-
-    const API = process.env.REACT_APP_API_URL;
-    let navigate = useNavigate();
 
     const handleTextChange = (e) => {
         setProduct({ ...product, [e.target.id]: e.target.value });
