@@ -10,7 +10,7 @@ export default function Product({ product }) {
     <div className="product-overview">
       <Link to={`/products/${product.id}`}>
         <h2>{product.name}</h2>
-        <img src={API + product.image} height="100px" alt="local url" />
+        <img src={API + product.image} alt="local url" />
       </Link>
       <div>Rating: {setStars(product)}</div>
       <div>Price: ${product.price}</div>

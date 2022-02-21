@@ -8,7 +8,7 @@ export default function Product({ product }) {
     <div className="product-overview">
         <Link to={`/products/${product.id}`}>
           <h2>{product.name}</h2>
-          <img src={product.image} height="100px" alt="text url" />
+          <img src={product.image} alt="text url" />
         </Link>
         <div>Rating: {setStars(product)}</div>
         <div>Price: ${product.price}</div>

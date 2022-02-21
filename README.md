@@ -24,6 +24,7 @@ Front-end Deployment (Netlify): [https://hardcore-poincare-178c01.netlify.app/](
 
 - Using the `map()` method on the `FourOFour.js` page to show a list of words beginning with the letter "C" from an array.
 
+- New & Edit forms: For Ratings, which must be between 1-5, set min and max values the user can enter as numbers. This is specifed in the `schema.sql` file in backend db.
 
 # PERN Final Project Template
 

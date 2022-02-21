@@ -5,7 +5,6 @@ body {
 /* Navbar Links and buttons */
 nav {
     background-color: ghostwhite;
-    /* background-image: url("https://c8.alamy.com/comp/2C9B02X/seamless-frozen-glass-texture-background-ice-effect-irregular-mottled-pattern-cold-mottled-frost-white-blue-all-over-print-2C9B02X.jpg"); */
     background-image: url("https://static.vecteezy.com/system/resources/previews/001/591/883/non_2x/magic-fairy-tale-pastel-sky-background-free-vector.jpg");
     background-size: 100%;
     background-position-y: top;
@@ -27,13 +26,22 @@ nav a {
     color: orangered;
 }
 
-nav button {
-    margin-top: 15%;
+.nav-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: 2%;
+}
+
+.nav-button button {
     background-color: white;
     color: orangered;
-    padding: 10px;
+    padding: 5px;
+    margin: auto;
     border-radius: 5px;
 }
+
 
 /* Products section - index */
 .products {
@@ -47,6 +55,59 @@ nav button {
     margin: 10px;
     text-align: center;
     padding-bottom: 15px;
+}
+
+.product-overview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Product details */
+.product-details-container {
+    margin: auto;
+}
+
+.product-details {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    border: 3px double gainsboro;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.details-container {
+    text-align: left;
+    margin: auto;
+    width: 600px;
+    background-color: white;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: auto;
+    width: 400px;
+}
+
+.product-details-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin: auto;
+    width: 400px;
+}
+
+.product-details-navigation button {
+    background-color: #fbc2f1;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 20px 5px 20px;
+    margin-top: 10px;
+    width: 100px;
 }
 
 /* Forms */
@@ -88,13 +149,30 @@ input[type="submit"] {
         text-align: center;
     }
 
-    nav button {
-        margin-top: 0;
+    .nav-button {
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 10px;
     }
 
     /* Products section - index */
     .products {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Product details */
+     .details-container {
+        width: 200px;
+    }
+
+    .details {
+        width: 200px;
+    }
+
+    .product-details-navigation {
+        flex-direction: column;
+        width: 200px;
+        align-items: center;
     }
 }
