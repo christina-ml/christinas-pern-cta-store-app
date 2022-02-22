@@ -25,6 +25,7 @@ Front-end Deployment (Netlify): [https://hardcore-poincare-178c01.netlify.app/](
 - Using the `map()` method on the `FourOFour.js` page to show a list of words beginning with the letter "C" from an array.
 
 - New & Edit forms: For Ratings, which must be between 1-5, set min and max values the user can enter as numbers. This is specifed in the `schema.sql` file in backend db.
+- Dropdown menu options for product descriptions of New & Edit forms. In case the user needs some help writing their product description, these pre-written options are available. Selected option shows up in textarea, which can be edited by the user and then submitted into the completed form.
 
 # PERN Final Project Template
 

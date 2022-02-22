@@ -62,6 +62,17 @@ export default function EditProduct() {
                     required
                 />
                 <label htmlFor="description">Product Description:</label>
+                <span> Is this product not selling?! Try a suggested starting description: </span>
+                <select id="description" type="text" onChange={handleTextChange}>
+                    <option>--choose suggestion--</option>
+                    <option value="Handmade item, made just for you!">Handmade item</option>
+                    <option value="This product is very calming and relaxing.">Calming and Relaxing</option>
+                    <option value="Very rare and unique product, it's one of a kind! Take good care of this item.">Rare and Unique</option>
+                    <option value="Great for everyday use, you will absolutely love it.">Everyday use</option>
+                    <option value="Just what you need in your life! Great for gifts as well.">Just what you need</option>
+                    <option value="There may be a discount available! Contact seller for more info.">Discount Available</option>
+                    <option value="This handmade item may contain small parts, which can be hazardous for children.">Hazardous Item</option>
+                 </select>
                 <textarea 
                     id="description"
                     type="text" 

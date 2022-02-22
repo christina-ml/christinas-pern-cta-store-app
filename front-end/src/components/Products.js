@@ -20,8 +20,6 @@ export default function Products() {
             });
     }, [])
 
-
-
     return (
         <div className="products">
             {products.map((product) => {
