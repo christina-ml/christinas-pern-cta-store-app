@@ -5,4 +5,4 @@
 --     name TEXT
 -- );
 
-ddapmplp2i03ch
+PG_DATABASE=ddapmplp2i03ch
