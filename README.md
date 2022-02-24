@@ -1,7 +1,7 @@
 ## Project Links
 Back-end Deployment (Heroku): [https://cl-cta-be.herokuapp.com/](https://cl-cta-be.herokuapp.com/)
 
-Front-end Deployment (Netlify): [https://hardcore-poincare-178c01.netlify.app/](https://hardcore-poincare-178c01.netlify.app/)
+Front-end Deployment (Netlify): [https://cl-cta-fe.netlify.app/](https://cl-cta-fe.netlify.app/)
 
 
 ## Additional Features
@@ -26,6 +26,9 @@ Front-end Deployment (Netlify): [https://hardcore-poincare-178c01.netlify.app/](
 
 - New & Edit forms: For Ratings, which must be between 1-5, set min and max values the user can enter as numbers. This is specifed in the `schema.sql` file in backend db.
 - Dropdown menu options for product descriptions of New & Edit forms. In case the user needs some help writing their product description, these pre-written options are available. Selected option shows up in textarea, which can be edited by the user and then submitted into the completed form.
+
+- Shopping Cart: When a button is clicked, that item is added to the cart.
+  - If there are no items in the cart, there is a message saying "Empty Cart".
 
 # PERN Final Project Template
 
