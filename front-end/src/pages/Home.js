@@ -5,7 +5,7 @@ export default function Home() {
       <p>
         At Christina's Crafts Store, we have many crafts items for sale.
       </p>
-      <p>This is Home.js where you should feel cozy and at home!</p>
+      <p>Please take a look!</p>
     </div>
   );
 }
