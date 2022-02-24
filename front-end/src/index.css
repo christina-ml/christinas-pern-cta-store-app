@@ -110,6 +110,34 @@ nav a {
     width: 100px;
 }
 
+/* Cart container */
+.cart-container {
+    height: 330px;
+    background-color: rgb(231, 195, 195);
+    background-image: url("https://media.istockphoto.com/vectors/vector-crumbled-paper-texture-vector-id626374442?k=20&m=626374442&s=612x612&w=0&h=NTXd4VoWN--1tYkJmUQAaqk4EBn6S2EVv7dkUwb_qGc=");
+    background-size: 100%;
+    overflow: scroll;
+    padding-left: 10px;
+}
+
+.addToCartButton {
+    text-align: center;
+}
+
+.addToCartButton button {
+    background-color: #fbc2f1;
+    border: 1px solid gainsboro;
+    box-shadow: 5px 5px 5px gainsboro;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 20px 5px 20px;
+    margin-bottom: 20px;
+}
+
+.addToCartButton button:hover {
+    background-color: #ccc2fb;
+}
+
 /* Forms */
 .form-container {
     padding-bottom: 30px;
