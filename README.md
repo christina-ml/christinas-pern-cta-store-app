@@ -89,6 +89,8 @@ When ready:
 - `git commit -m 'heroku deployment`
 - `git push heroku main` - if this does not work, go to heroku dashboard => deployment and add the remote
 
+2/24 - Updated command to use : `git subtree push --prefix back-end heroku main` 
+
 ie `heroku git:remote -a <your-heroku-app-name>`
 
 Open your heroku app. You should see the `Hello, world!` message.
