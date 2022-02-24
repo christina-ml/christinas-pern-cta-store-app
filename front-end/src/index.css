@@ -4,6 +4,10 @@ body {
     margin: 0;
 }
 
+main {
+    margin: 10px;
+}
+
 /* Navbar Links and buttons */
 nav {
     background-color: ghostwhite;
