@@ -121,10 +121,10 @@ export default function EditProduct() {
                     onChange={handleTextChange}
                     placeholder="https://"
                 />
-                <input type="submit" />
+                <input className="form-button" type="submit" />
             </form>
             <Link to={`/products/${id}`}>
-                <button>Nevermind!</button>
+                <button className="form-button">Nevermind!</button>
             </Link>
         </div>
     )

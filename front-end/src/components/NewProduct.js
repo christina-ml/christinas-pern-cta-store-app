@@ -10,8 +10,8 @@ export default function NewProduct() {
     let [product, setProduct] = useState({
         name: "",
         description: "",
-        price: 30,
-        rating: 3,
+        price: null,
+        rating: null,
         featured: false,
         seller: "",
         image: "",
@@ -109,10 +109,10 @@ export default function NewProduct() {
                     onChange={handleTextChange}
                     placeholder="https://"
                 />
-                <input type="submit" />
+                <input className="form-button" type="submit" />
             </form>
             <Link to={`/products`}>
-                <button>Cancel</button>
+                <button className="form-button">Cancel</button>
             </Link>
         </div>
     )
