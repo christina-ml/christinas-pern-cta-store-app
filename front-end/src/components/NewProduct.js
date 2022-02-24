@@ -7,11 +7,6 @@ const API = process.env.REACT_APP_API_URL;
 export default function NewProduct() {
     let navigate = useNavigate();
 
-    let options = {
-        one: "this is good product",
-        two: "wonderful product"
-    }
-
     let [product, setProduct] = useState({
         name: "",
         description: "",
