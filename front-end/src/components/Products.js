@@ -25,7 +25,7 @@ export default function Products() {
 
     const handleAddToCart=(product)=>{
         setcartArr([...cartArr, product]);
-        setSubtotal(subtotal + product.price);
+        setSubtotal(Number(subtotal) + product.price);
       }
 
       /* Individual Cart Items to go into Cart component as list items */
