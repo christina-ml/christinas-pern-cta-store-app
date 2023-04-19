@@ -1,3 +1,5 @@
+import './Cart.css';
+
 export default function Cart({ cartItems, subtotal }) {
   // export default function Cart({ cartItems, subtotal }) {
   return (
