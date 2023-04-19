@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 // import child component
 import Product from "./Product";
 import ProductLocal from "./ProductLocal";
-import Cart from "./Cart";
+import Cart from "./Cart/Cart";
 
 const API = process.env.REACT_APP_API_URL;
 

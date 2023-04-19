@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES
-import NavBar from "./pages/NavBar";
-import Home from "./pages/Home";
+import NavBar from "./components/NavBar/NavBar";
+import Home from "./components/Home/Home";
 import Index from "./pages/Index";
 import New from "./pages/New";
 import Show from "./pages/Show";
 import Edit from "./pages/Edit";
-import FourOFour from "./pages/FourOFour";
+import FourOFour from "./components/FourOFour/FourOFour";
 
 export default function App() {
   return (

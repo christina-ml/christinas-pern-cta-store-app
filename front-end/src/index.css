@@ -5,50 +5,9 @@ body {
 }
 
 main {
-    margin: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
-
-/* Navbar Links and buttons */
-nav {
-    background-color: ghostwhite;
-    background-image: url("https://static.vecteezy.com/system/resources/previews/001/591/883/non_2x/magic-fairy-tale-pastel-sky-background-free-vector.jpg");
-    background-size: 100%;
-    background-position-y: top;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-nav h1 {
-    background-color: ghostwhite;
-    padding: 5px;
-    border-radius: 5px;
-    font-family: 'Redressed', cursive;
-}
-
-nav a {
-    text-decoration: none;
-    color: orangered;
-}
-
-.nav-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 200px;
-    margin-top: 2%;
-}
-
-.nav-button button {
-    background-color: white;
-    color: orangered;
-    padding: 5px;
-    margin: auto;
-    border-radius: 5px;
-}
-
 
 /* Products section - index */
 .products {
@@ -123,36 +82,6 @@ nav a {
     width: 100px;
 }
 
-/* Cart container */
-.cart-container {
-    height: 330px;
-    background-color: rgb(231, 195, 195);
-    background-image: url("https://media.istockphoto.com/vectors/vector-crumbled-paper-texture-vector-id626374442?k=20&m=626374442&s=612x612&w=0&h=NTXd4VoWN--1tYkJmUQAaqk4EBn6S2EVv7dkUwb_qGc=");
-    background-size: 100%;
-    overflow: scroll;
-    padding-left: 10px;
-}
-
-.addToCartButton {
-    text-align: center;
-}
-
-.form-button,
-.addToCartButton button {
-    background-color: #fbc2f1;
-    border: 1px solid gainsboro;
-    box-shadow: 5px 5px 5px gainsboro;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 5px 20px 5px 20px;
-    margin-bottom: 20px;
-}
-
-.form-button:hover,
-.addToCartButton button:hover {
-    background-color: #ccc2fb;
-}
-
 /* Forms */
 .form-container {
     padding-bottom: 30px;
@@ -220,3 +149,10 @@ input[type="submit"] {
         align-items: center;
     }
 }
+
+/* Home page */
+.featured {
+    margin: 0px 400px;
+}
+
+  

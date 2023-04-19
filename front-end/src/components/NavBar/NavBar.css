@@ -1,0 +1,45 @@
+/* Navbar Links and buttons */
+.nav-container {
+  background-color: ghostwhite;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/001/591/883/non_2x/magic-fairy-tale-pastel-sky-background-free-vector.jpg");
+  background-size: 100%;
+  background-position-y: top;
+}
+
+nav {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+nav h1 {
+  background-color: ghostwhite;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: 'Redressed', cursive;
+}
+
+nav a {
+  text-decoration: none;
+  color: orangered;
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  margin-top: 2%;
+}
+
+.nav-button button {
+  background-color: white;
+  color: orangered;
+  padding: 5px;
+  margin: auto;
+  border-radius: 5px;
+}
