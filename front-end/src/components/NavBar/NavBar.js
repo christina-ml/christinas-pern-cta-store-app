@@ -1,17 +1,27 @@
 import { Link } from "react-router-dom";
 
-import './NavBar.css';
+import { BsCart4 } from "react-icons/bs";
 
-export default function NavBar() {
+import './Navbar.scss';
+
+export default function Navbar() {
     return (
-        <div className="nav-container">
-            <nav>
-                <Link to="/"><h1>Christina's Crafts Store</h1></Link>
-                <div className="nav-button">
-                    <Link to="/products"><button>All Products</button></Link>
-                    <Link to="/products/new"><button>New Product</button></Link>
+        <div className="navbar">
+            <div className="navbar__items">
+                <div className="navbar__items__logo">
+                    <Link to="/">
+                        <div>
+                            Christina's Crafts Store
+                        </div>
+                    </Link>
                 </div>
-            </nav>
+                <ul>
+                    <li><Link to="/products">All Products</Link></li>
+                    <li><Link to="/products/new">New Product</Link></li>
+                    <li><Link to="/cart"><BsCart4/></Link></li>
+                </ul>
+                
+            </div>
         </div>
     )
 }
