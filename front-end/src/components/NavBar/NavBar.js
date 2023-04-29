@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { BsCart4 } from "react-icons/bs";
 
-import './NavBar.scss';
+import './Navbar.scss';
 
 export default function NavBar() {
     return (
