@@ -30,6 +30,17 @@ Front-end Deployment (Netlify): [https://cl-cta-fe.netlify.app/](https://cl-cta-
 - Shopping Cart: When a button is clicked, that item is added to the cart.
   - If there are no items in the cart, there is a message saying "Empty Cart".
 
+# Update April 2023
+Add `SCSS` styling to frontend:
+```
+npm i sass
+```
+
+Add `React Icons` to frontend:
+```
+npm install react-icons --save
+```
+
 # PERN Final Project Template
 
 - select `use this template`
