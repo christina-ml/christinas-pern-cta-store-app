@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES
-import Navbar from "./components/Navbar/Navbar";
+import NavBar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Index from "./pages/Index";
 import Show from "./pages/Show";
@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <NavBar />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

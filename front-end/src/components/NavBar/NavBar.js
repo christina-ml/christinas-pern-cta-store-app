@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 import { BsCart4 } from "react-icons/bs";
 
-import './Navbar.scss';
+import './NavBar.scss';
 
-export default function Navbar() {
+export default function NavBar() {
     return (
         <div className="navbar">
             <div className="navbar__items">
@@ -19,8 +19,7 @@ export default function Navbar() {
                     <li><Link to="/products">All Products</Link></li>
                     <li><Link to="/products/new">New Product</Link></li>
                     <li><Link to="/cart"><BsCart4/></Link></li>
-                </ul>
-                
+                </ul> 
             </div>
         </div>
     )
