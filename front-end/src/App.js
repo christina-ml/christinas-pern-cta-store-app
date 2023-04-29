@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES
-import NavBar from "./components/NavBar/NavBar";
 import Home from "./components/Home/Home";
 import Index from "./pages/Index";
 import Show from "./pages/Show";
@@ -14,7 +13,7 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
+        
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
