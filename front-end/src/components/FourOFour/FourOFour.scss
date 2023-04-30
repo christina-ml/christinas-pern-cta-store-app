@@ -1,39 +1,39 @@
 .fourOFour {
-  max-width: 1200px;
-  cursor: default;
-  
-  &__errorMsg {
-    text-align: center;
-    color: orangered;
-    transition: 0.5s;
+	max-width: 1200px;
+	cursor: default;
 
-    &:hover {
-      color: black;
-    }
-  }
+	&__errorMsg {
+		text-align: center;
+		color: orangered;
+		transition: 0.5s;
 
-  &__words {
-    display: inline-block;
-    
-    &__cIsFor {
-      text-align: left;
-    }
-    
-    &__wordsWithC {
-      display: flex;
-      flex-direction: row;
-      justify-items: center;
-      align-items: center;
-      cursor: pointer;
-      
-      &__randomWordEnding {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 80px;
-        color: rgb(225, 0, 81);
-        text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
-        letter-spacing: 0.2em;
-      }
-    }
-  }
+		&:hover {
+			color: black;
+		}
+	}
 
+	&__words {
+		display: inline-block;
+
+		&__cIsFor {
+			text-align: left;
+		}
+
+		&__wordsWithC {
+			display: flex;
+			flex-direction: row;
+			justify-items: center;
+			align-items: center;
+			cursor: pointer;
+
+			&__randomWordEnding {
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				font-size: 80px;
+				color: rgb(225, 0, 81);
+				text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
+					3px 3px 0 #000;
+				letter-spacing: 0.2em;
+			}
+		}
+	}
 }

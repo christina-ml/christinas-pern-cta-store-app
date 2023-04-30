@@ -11,26 +11,25 @@ import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 import NewProduct from "./components/NewProduct/NewProduct";
 
 export default function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<ShoppingCart />} />
-            <Route path="/products" element={<Index />} />
-            <Route path="/products/New" element={<NewProduct />} />
-            <Route path="/products/:id" element={<Show />} />
-            <Route path="/products/:id/edit" element={<Edit />} />
-            <Route path="*" element={<FourOFour />} />
-          </Routes>
-        </main>
-      </Router>
-    </div>
-  )
+	return (
+		<div className="App">
+			<Router>
+				<Navbar />
+				<main>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/cart" element={<ShoppingCart />} />
+						<Route path="/products" element={<Index />} />
+						<Route path="/products/New" element={<NewProduct />} />
+						<Route path="/products/:id" element={<Show />} />
+						<Route path="/products/:id/edit" element={<Edit />} />
+						<Route path="*" element={<FourOFour />} />
+					</Routes>
+				</main>
+			</Router>
+		</div>
+	);
 }
-
 
 // import axios from "axios";
 // import { useState, useEffect } from "react";

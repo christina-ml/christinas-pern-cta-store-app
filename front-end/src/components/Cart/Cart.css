@@ -1,36 +1,36 @@
 /* Cart container */
 .cart-container {
-  height: 330px;
-  background-color: rgb(231, 195, 195);
-  background-image: url("https://media.istockphoto.com/vectors/vector-crumbled-paper-texture-vector-id626374442?k=20&m=626374442&s=612x612&w=0&h=NTXd4VoWN--1tYkJmUQAaqk4EBn6S2EVv7dkUwb_qGc=");
-  background-size: 100%;
-  padding: 0px 10px;
+	height: 330px;
+	background-color: rgb(231, 195, 195);
+	background-image: url("https://media.istockphoto.com/vectors/vector-crumbled-paper-texture-vector-id626374442?k=20&m=626374442&s=612x612&w=0&h=NTXd4VoWN--1tYkJmUQAaqk4EBn6S2EVv7dkUwb_qGc=");
+	background-size: 100%;
+	padding: 0px 10px;
 }
 
 .addToCartButton {
-  text-align: center;
+	text-align: center;
 }
 
 .form-button,
 .addToCartButton button {
-  background-color: #fbc2f1;
-  border: 1px solid gainsboro;
-  box-shadow: 5px 5px 5px gainsboro;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 5px 20px 5px 20px;
-  margin-bottom: 20px;
+	background-color: #fbc2f1;
+	border: 1px solid gainsboro;
+	box-shadow: 5px 5px 5px gainsboro;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 5px 20px 5px 20px;
+	margin-bottom: 20px;
 }
 
 .form-button:hover,
 .addToCartButton button:hover {
-  background-color: #ccc2fb;
+	background-color: #ccc2fb;
 }
 .cart-added-items {
-  height: 100px;
-  overflow: scroll;
-  background-color:rgb(231, 195, 195, 30%);
+	height: 100px;
+	overflow: scroll;
+	background-color: rgb(231, 195, 195, 30%);
 }
 .cart-total {
-  position: sticky;
+	position: sticky;
 }

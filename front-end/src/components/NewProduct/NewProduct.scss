@@ -1,60 +1,60 @@
 .newProduct {
-  text-align: center;
+	text-align: center;
 
-  &__formContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    margin: 0 auto;
-    width: 650px;
-    border: 1px solid orangered;
-    border-radius: 10px;
-    
-    table {
-      width: 500px;
-      text-align: left;
-      margin: 20px;
-    
-      // align labels and input fields to center
-      td:nth-child(odd) {
-        text-align: right;
-      }
-      td:nth-child(even) {
-        text-align: left;
-      }
+	&__formContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-items: center;
+		margin: 0 auto;
+		width: 650px;
+		border: 1px solid orangered;
+		border-radius: 10px;
 
-      // labels for input fields
-      label {
-        color: orangered;
-      }
-      
-      // input fields
-      input[type],
-      textarea {
-      width: 80%;
-      resize: vertical;
-      }
-      
-      input[type="checkbox"] {
-        width: 10%;
-      }
-      
-      input[type="number"] {
-        width: 20%;
-      }
-      
-      input[type="submit"] {
-        width: 100px;
-      }
-    }
-    
-    .formSubmitButton {
-      text-align: center;
-    }
-  }
+		table {
+			width: 500px;
+			text-align: left;
+			margin: 20px;
 
-  &__cancelButton {
-    margin-top: 20px;
-  }
+			// align labels and input fields to center
+			td:nth-child(odd) {
+				text-align: right;
+			}
+			td:nth-child(even) {
+				text-align: left;
+			}
+
+			// labels for input fields
+			label {
+				color: orangered;
+			}
+
+			// input fields
+			input[type],
+			textarea {
+				width: 80%;
+				resize: vertical;
+			}
+
+			input[type="checkbox"] {
+				width: 10%;
+			}
+
+			input[type="number"] {
+				width: 20%;
+			}
+
+			input[type="submit"] {
+				width: 100px;
+			}
+		}
+
+		.formSubmitButton {
+			text-align: center;
+		}
+	}
+
+	&__cancelButton {
+		margin-top: 20px;
+	}
 }

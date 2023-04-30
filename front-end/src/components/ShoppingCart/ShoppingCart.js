@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ShoppingCart = () => {
-  return (
-    <div>Hello Shopping Cart</div>
-  )
-}
+	return <div>Hello Shopping Cart</div>;
+};
 
 export default ShoppingCart;

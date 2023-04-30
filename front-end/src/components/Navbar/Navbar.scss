@@ -1,43 +1,43 @@
 .navbar {
-  background-color: ghostwhite;
-  background-image: url("https://static.vecteezy.com/system/resources/previews/001/591/883/non_2x/magic-fairy-tale-pastel-sky-background-free-vector.jpg");
-  background-size: 100%;
-  background-position-y: top;
+	background-color: ghostwhite;
+	background-image: url("https://static.vecteezy.com/system/resources/previews/001/591/883/non_2x/magic-fairy-tale-pastel-sky-background-free-vector.jpg");
+	background-size: 100%;
+	background-position-y: top;
 
-  &__items {
-    padding: 0px 10px;
-    margin: 0 auto;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    color: orangered;
-    
-    a {
-      background-color: ghostwhite;
-      padding: 5px 10px;
-      border-radius: 10px;
-      color: orangered;
-      text-decoration: none;
-    }
-    
-    ul {
-      display: flex;
-      width: 300px;
-      padding-left: 0;
-      justify-content: space-between;
-      li {
-        list-style-type: none;
-      }
-    }
+	&__items {
+		padding: 0px 10px;
+		margin: 0 auto;
+		max-width: 1200px;
+		display: flex;
+		justify-content: space-between;
+		color: orangered;
 
-    &__logo {
-      font-family: 'Redressed', cursive;
-      border-radius: none;
-      font-size: 40px;
-      a {
-        padding: 0px;
-        border-radius: 0px;
-      }
-    }
-  }
+		a {
+			background-color: ghostwhite;
+			padding: 5px 10px;
+			border-radius: 10px;
+			color: orangered;
+			text-decoration: none;
+		}
+
+		ul {
+			display: flex;
+			width: 300px;
+			padding-left: 0;
+			justify-content: space-between;
+			li {
+				list-style-type: none;
+			}
+		}
+
+		&__logo {
+			font-family: "Redressed", cursive;
+			border-radius: none;
+			font-size: 40px;
+			a {
+				padding: 0px;
+				border-radius: 0px;
+			}
+		}
+	}
 }
