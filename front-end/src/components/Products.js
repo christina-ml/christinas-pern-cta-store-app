@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 // import child component
 import Product from "./Product";
-import ProductLocal from "./ProductLocal";
 import Cart from "./Cart/Cart";
 
 const API = process.env.REACT_APP_API_URL;
@@ -44,25 +43,16 @@ export default function Products() {
             </div>
 
             {products.map((product) => {
-                if (product.image.substring(0,8) === "https://") {
-                    return (
-                        <div className="product-overview">
-                            <Product key={product.id} product={product} />
-                            <div className="addToCartButton">
-                                <button type="submit" onClick={()=>handleAddToCart(product)}>Add To Cart</button>
-                            </div>
+                const src = (product.image.substring(0,8) === "https://") ? (product.image) : (API + product.image);
+
+                return (
+                    <div className="product-overview">
+                        <Product key={product.id} product={product} src={src} />
+                        <div className="addToCartButton">
+                            <button type="submit" onClick={()=>handleAddToCart(product)}>Add To Cart</button>
                         </div>
-                    )
-                } else {
-                    return (
-                        <div className="product-overview">
-                            <ProductLocal key={product.id} product={product} />
-                            <div className="addToCartButton">
-                                <button type="submit" onClick={()=>handleAddToCart(product)}>Add To Cart</button>
-                            </div>
-                        </div>
-                    )
-                }
+                    </div>
+                )
             })}
         </div>
     )
