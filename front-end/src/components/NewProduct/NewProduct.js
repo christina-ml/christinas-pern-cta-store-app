@@ -50,9 +50,9 @@ export default function NewProduct() {
                 Price must be at least $1 and Ratings between 0-5.
             </h4>
             
-            <div className="form-container">
+            <div className="newProduct__formContainer">
                 <form onSubmit={handleSubmit}>
-                    <table>
+                    <table className="newProduct__formContainer__table">
                         <tr>
                             <td><label htmlFor="name">Product Name:</label></td>
                             <td>
@@ -109,7 +109,7 @@ export default function NewProduct() {
                         <tr>
                             <td><label htmlFor="rating">Rating 1-5:</label></td>
                             <td>
-                                <input 
+                                &nbsp;&nbsp;<input 
                                     id="rating"
                                     type="number"
                                     min="1"
@@ -156,12 +156,12 @@ export default function NewProduct() {
                             </td>
                         </tr>
                     </table>
-                    <div className="formSubmitButton">
+                    <div className="newProduct__formContainer__formSubmitButton">
                         <input className="form-button" type="submit" />
                     </div>
                 </form>
             </div>
-            <div className="cancelButton">
+            <div className="newProduct__cancelButton">
                 <Link to={`/products`}>
                     <button className="form-button">Cancel</button>
                 </Link>
