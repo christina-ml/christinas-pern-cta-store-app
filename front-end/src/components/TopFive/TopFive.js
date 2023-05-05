@@ -12,7 +12,6 @@ const TopFive = ({key, product, src, id}) => {
 					<img src={src} alt={product.name} />
 				</div>
 				<div className="topFiveProducts__productName">{product.name}</div>
-				<div>{setStars(product)}</div>
 			</Link>
 		</div>
 	);

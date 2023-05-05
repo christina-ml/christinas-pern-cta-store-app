@@ -1,12 +1,23 @@
 .topFiveProducts {
     max-width: 125px;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+        border-bottom: 3px solid gray;
+    }
     
     &__productName {
+        margin-top: 15px;
         font-size: 20px;
         font-family: "Redressed", cursive;
     }
+
     &__image {
         img {
+            &:hover {
+                transition: 0.3s;
+                scale: 1.1;
+            }
             border: 1px solid lightgray;
             border-radius: 50%;
             object-fit: cover;

@@ -32,7 +32,7 @@ export default function Home() {
 							{/* show only top 5 rated products */}
 							{products
 								.sort((a, b) => (a.rating < b.rating ? 1 : -1))
-								.slice(0, 5)
+								.slice(0, 6)
 								.map((product, index) => {
 									const src =
 										product.image.substring(0, 8) ===
