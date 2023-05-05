@@ -1,0 +1,43 @@
+.home {
+	&__banner {
+		// has mainContent with topFive div, and then welcome div
+		background-color: rgb(238, 237, 252);
+		height: 165px;
+
+		&__mainContent {
+			max-width: 1200px;
+			margin: 0 auto;
+
+			&__topFive {
+				display: flex;
+				margin: 0 auto;
+				text-align: center;
+				flex-direction: column;
+
+				a {
+					text-decoration: none;
+					color: black;
+				}
+
+				&__topFiveHeader {
+					font-size: 35px;
+					font-weight: 300;
+					font-family: serif;
+					margin-top: 20px;
+				}
+				&__topRatedProducts {
+					padding-top: 30px;
+					position: relative;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+				}
+			}
+		}
+		&__welcome {
+			font-size: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+	}
+}
