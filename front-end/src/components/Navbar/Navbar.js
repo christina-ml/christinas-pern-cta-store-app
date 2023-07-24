@@ -10,7 +10,7 @@ export default function Navbar() {
                 <div className="navbar__items__logo">
                     <Link to="/">
                         <div>
-                            Christina's Crafts Store
+                            Christina's Crafts
                         </div>
                     </Link>
                 </div>

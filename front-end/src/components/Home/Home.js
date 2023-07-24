@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 import "./Home.scss";
-import TopFive from "../TopFive/TopFive";
+import TopRatedProduct from "../TopRatedProduct/TopRatedProduct";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -24,12 +24,11 @@ export default function Home() {
 		<div className="home">
 			<div className="home__banner">
 				<div className="home__banner__mainContent">
-					<div className="home__banner__mainContent__topFive">
-						<div className="home__banner__mainContent__topFive__topFiveHeader">
+					<div className="home__banner__mainContent__topRated">
+						<div className="home__banner__mainContent__topRated__topRatedHeader">
 							Top rated handcrafted treasures
 						</div>
-						<div className="home__banner__mainContent__topFive__topRatedProducts">
-							{/* show only top 5 rated products */}
+						<div className="home__banner__mainContent__topRated__topRatedProducts">
 							{products
 								.sort((a, b) => (a.rating < b.rating ? 1 : -1))
 								.slice(0, 6)
@@ -41,7 +40,7 @@ export default function Home() {
 											: API + product.image;
 
 									return (
-										<TopFive
+										<TopRatedProduct
 											product={product}
 											src={src}
 											id={index}
